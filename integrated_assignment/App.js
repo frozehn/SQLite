@@ -1,12 +1,14 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './Screens/HomeScreen';
-import RegisterUser from './Screens/RegisterUser';
-import ViewAllUser from './Screens/ViewAllUser';
+import HomeScreen from './HomeScreen';
+import RegisterUser from './RegisterUser';
+import ViewAllUser from './ViewAllUser';
+import Update from './Update';
+import Review from './Review';
+import Erase from './Erase';
 
 const Stack = createStackNavigator();
 
@@ -56,6 +58,48 @@ export default function App() {
              },
           }}
         />
+        <Stack.Screen
+          name="Update"
+          component={Update}
+          options={{
+            title: 'Update User', //Set Header Title
+             headerStyle: {
+               backgroundColor: '#4d94ff', //Set Header color
+             },
+             headerTintColor: '#fff', //Set Header text color
+             headerTitleStyle: {
+               fontWeight: 'bold', //Set Header text style
+             },
+          }}
+        />
+        <Stack.Screen
+          name="Review"
+          component={Review}
+          options={{
+            title: 'Review User', //Set Header Title
+             headerStyle: {
+               backgroundColor: '#4d94ff', //Set Header color
+             },
+             headerTintColor: '#fff', //Set Header text color
+             headerTitleStyle: {
+               fontWeight: 'bold', //Set Header text style
+             },
+          }}
+        />
+        <Stack.Screen
+          name="Erase"
+          component={Erase}
+          options={{
+            title: 'Erase User', //Set Header Title
+             headerStyle: {
+               backgroundColor: '#4d94ff', //Set Header color
+             },
+             headerTintColor: '#fff', //Set Header text color
+             headerTitleStyle: {
+               fontWeight: 'bold', //Set Header text style
+             },
+          }}
+        />                    
       </Stack.Navigator>
     </NavigationContainer>  
   );

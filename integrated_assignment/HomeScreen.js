@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { View, Text, SafeAreaView, StyleSheet, Image } from 'react-native';
-import Mainbutton from './components/mainButton';
-import Mytext from './components/Mytext';
+import { View, StyleSheet, Image } from 'react-native';
+import Mainbutton from './mainButton';
+//import Mytext from './Mytext';
 import * as SQLite from 'expo-sqlite';
 
 var db = SQLite.openDatabase({ name: 'UserDatabase.db' });
@@ -40,16 +40,16 @@ const HomeScreen = ({ navigation }) => {
             customClick={() => navigation.navigate('Update')}
           />
           <Mainbutton
-            title="View"
-            customClick={() => navigation.navigate('View')}
+            title="Review"
+            customClick={() => navigation.navigate('Review')}
           />
           <Mainbutton
             title="View All"
             customClick={() => navigation.navigate('ViewAll')}
           />
           <Mainbutton
-            title="Delete"
-            customClick={() => navigation.navigate('Delete')}
+            title="Erase"
+            customClick={() => navigation.navigate('Erase')}
           />
         </View>
       </View>

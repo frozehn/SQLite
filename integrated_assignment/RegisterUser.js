@@ -6,8 +6,8 @@ import {
   Alert,
   SafeAreaView,
 } from 'react-native';
-import Mytextinput from './components/Mytextinput';
-import Mainbutton from './components/mainButton';
+import Mytextinput from './Mytextinput';
+import Mainbutton from './mainButton';
 import * as SQLite from 'expo-sqlite';
 
 
