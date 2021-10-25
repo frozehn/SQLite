@@ -26,11 +26,13 @@ const HomeScreen = ({ navigation }) => {
     });
   }, []);
 
+//<Image style={styles.image} source={require("/assets/logo-social.png")} /> <---review
+
   return (
     <View style={styles.container}>
       <View>
         <View>
-        <Image style={styles.image} source={require("../assets/logo-social.png")} />
+         
           <Mainbutton
             title="Register"
             customClick={() => navigation.navigate('Register')}
