@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import Mainbutton from './mainButton';
-//import Mytext from './Mytext';
+import Mytext from './Mytext';
 import * as SQLite from 'expo-sqlite';
 
 var db = SQLite.openDatabase({ name: 'UserDatabase.db' });
@@ -26,13 +26,11 @@ const HomeScreen = ({ navigation }) => {
     });
   }, []);
 
-//<Image style={styles.image} source={require("/assets/logo-social.png")} /> <---review
-
   return (
     <View style={styles.container}>
       <View>
         <View>
-         
+         <Image style={styles.image} source={require("/assets/logo-social.png")} />
           <Mainbutton
             title="Register"
             customClick={() => navigation.navigate('Register')}
@@ -58,7 +56,7 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
 };
-
+//Stylesheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -73,5 +71,4 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
 });
-
 export default HomeScreen;
