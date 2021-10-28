@@ -7,7 +7,7 @@ import HomeScreen from './HomeScreen';
 import RegisterUser from './RegisterUser';
 import ViewAllUser from './ViewAllUser';
 import Update from './Update';
-import Review from './Review';
+import Review from './View';
 import Erase from './Erase';
 
 const Stack = createStackNavigator();
